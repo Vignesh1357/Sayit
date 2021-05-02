@@ -1,0 +1,22 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block bodyContent %}
+    <h5 style="color:#5f788a">Your Inbox:</h5>
+
+    <div >
+        {% if first_post is None %}
+            <h1 class="article-content">No Messages</h1>
+        {% else %}
+            {% for post in posts %}
+                <article class="media content-section">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+                    </div>
+                    <p class="article-content">{{ post.content }}</p>
+                </div>
+                </article>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock bodyContent %}

@@ -1,0 +1,32 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block headContent %}
+    <a class="nav-item nav-link" href="{% url 'new-inbox' %}">Create Inbox</a>
+{% endblock headContent %}
+{% block bodyContent %}
+    <h5 style="color:#5f788a">Your Inbox:</h5>
+
+    <div>
+        {% if inboxes is None %}
+            <h2 class="article-content">You haven't created an inbox yet.</h2>
+        {% else %}
+            {% for inbox in inboxes %}
+                <article class="media content-section">
+                <div class="media-body">
+                    {% if inbox.inbox_url is None %}
+                        <div class="article-metadata">
+                            <small class="text-muted"><a href="{% url 'inbox_url' inbox.pk %}">Generate Link</a></small>
+                        </div>
+                    {% else %}
+                        <div class="article-metadata">
+                            <small class="text-muted">You can share this URL :</small>
+                            <small>{{ url }}{{ user_id }}/{{ inbox.inbox_url }}/</small>
+                        </div>
+                    {% endif %}
+                    <h4 class="article-content"><a href="{% url 'message-view' inbox.inbox_url %}">{{ inbox.inbox_name }}</a></h4>
+                </div>
+                </article>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock bodyContent %}
