@@ -1,2 +1,2 @@
 # Sayit
-An confession website
+A website for a confession
