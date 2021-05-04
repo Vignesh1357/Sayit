@@ -26,7 +26,7 @@ class InboxListView(LoginRequiredMixin, ListView):
 
 
 # Inbox creation view
-class InboxCreateView(CreateView):
+class InboxCreateView(LoginRequiredMixin, CreateView):
     model = Inbox
     fields = ['inbox_name']
     template_name = 'user/new_inbox.html'
@@ -71,7 +71,7 @@ class MsgCreateView(CreateView):
 
 
 # Message view inside inbox
-class MsgListView(ListView):
+class MsgListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'user/inbox.html'
     ordering = ['-date_posted']
