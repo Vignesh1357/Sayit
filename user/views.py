@@ -3,9 +3,9 @@ from django.contrib import messages
 from .models import Post, Inbox, Profile
 from django.views.generic import ListView, CreateView
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
+from django.http import HttpResponseForbidden
 import os, random, string
 from django.urls import reverse_lazy
 
@@ -18,7 +18,7 @@ class InboxListView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['inboxes'] = Inbox.objects.filter(user=self.request.user.id)
-        context['url'] = self.request.get_host()+ '/' + 'sayit/message/'
+        context['url'] = self.request.get_host() + '/' + 'sayit/message/'
         context['user_id'] = self.request.user.id
         return context
 
@@ -41,11 +41,11 @@ class InboxCreateView(LoginRequiredMixin, CreateView):
 def inbox(request, pk):
     inbox_obj = Inbox.objects.get(pk=pk)
 
-    def inboxURL():
-        x =''.join(random.choice(string.ascii_uppercase) for i in range(16))
+    def inbox_url():
+        x = ''.join(random.choice(string.ascii_uppercase) for i in range(16))
         return x
 
-    inbox_obj.inbox_url = inboxURL()
+    inbox_obj.inbox_url = inbox_url()
     inbox_obj.save()
     return redirect('home')
 
@@ -71,17 +71,32 @@ class MsgCreateView(CreateView):
 
 
 # Message view inside inbox
-class MsgListView(LoginRequiredMixin, ListView):
+class MsgListView(LoginRequiredMixin,UserPassesTestMixin,ListView):
     model = Post
     template_name = 'user/inbox.html'
     ordering = ['-date_posted']
+    def test_func(self):
+        try:
+            if Inbox.objects.get(inbox_url=self.kwargs.get('message')).user.user == self.request.user:
+                return True
+            else:
+                return False
+        except:
+            return True
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         posts = Post.objects.filter(inbox_url=self.kwargs.get('message'))
-        context['posts'] = posts
-        context['first_post'] = posts.first()
+
+        if self.kwargs.get('message') == 'None':
+            context['message_box'] = False
+
+        else:
+            context['posts'] = posts
+            context['first_post'] = posts.first()
+            context['message_box'] = True
         return context
+
 
 
 # User registration view
