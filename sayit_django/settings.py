@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
+
+# retrieving from environment variables
+AWS_ACCESS_KEY_ID = 'AKIAU5EJXLQHVRTEIHRE'
+AWS_SECRECT_ACCESS_KEY = 'raUVRngceDnL0xIn0RosSAGyvZtR5mxOsiEIfaNQ'
+AWS_STORAGE_BUCKET_NAME = 'sayit-django-files'
+
+AWS_S3_REGION_NAME = "us-east-2"
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

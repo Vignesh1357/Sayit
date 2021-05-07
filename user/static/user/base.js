@@ -5,3 +5,7 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+
+var s3 = new AWS.S3({
+    signatureVersion: 'v4'
+    });
