@@ -13,4 +13,5 @@ urlpatterns = [
     path('profile', views.profile, name='profile'),
     path('sayit/message/<int:id>/<str:message>/', MsgCreateView.as_view(), name='message'),
     path('message_view/<str:message>/', MsgListView.as_view(), name='message-view'),
+    path('delete_profile/<int:pk>/', views.delete_profile, name='delete-profile'),
 ]

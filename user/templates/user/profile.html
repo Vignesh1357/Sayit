@@ -15,10 +15,18 @@
                     {{ u_form|crispy }}
                     {{ p_form|crispy }}
             </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit" name="update" value="update">Update</button>
-                <button class="btn btn-outline-info dlt-act" type="submit" name="delete" value="delete">Delete account</button>
-            </div>
+            {% if user.profile.image == 'default.jpg' %}
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit" name="update" value="update">Update</button>
+                    <button class="btn btn-outline-info dlt-act" type="submit" name="delete" value="delete">Delete account</button>
+               </div>
+            {% else %}
+                <h6 class="dlt-profile"><a href="{% url 'delete-profile' user.pk %}">Remove </a>current profile picture</h6>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit" name="update" value="update">Update</button>
+                    <button class="btn btn-outline-info dlt-act" type="submit" name="delete" value="delete">Delete account</button>
+                </div>
+            {% endif %}
         </form>
     </div>
 {% endblock content %}

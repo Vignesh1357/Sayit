@@ -6,7 +6,7 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
-import os, random, string
+import os, random, string, boto3
 from django.urls import reverse_lazy
 
 
@@ -71,10 +71,11 @@ class MsgCreateView(CreateView):
 
 
 # Message view inside inbox
-class MsgListView(LoginRequiredMixin,UserPassesTestMixin,ListView):
+class MsgListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
     model = Post
     template_name = 'user/inbox.html'
     ordering = ['-date_posted']
+
     def test_func(self):
         try:
             if Inbox.objects.get(inbox_url=self.kwargs.get('message')).user.user == self.request.user:
@@ -98,7 +99,6 @@ class MsgListView(LoginRequiredMixin,UserPassesTestMixin,ListView):
         return context
 
 
-
 # User registration view
 def register(request):
     if request.method == 'POST':
@@ -116,23 +116,44 @@ def register(request):
 @login_required
 def profile(request):
     if request.method == 'POST':
-        u_form = UserUpdateForm(request.POST, instance=request.user)
+        u_form = UserUpdateForm(request.POST, instance=request.user)  # basic info update form
+        # image update form
         p_form = ProfileUpdateForm(request.POST,
                                    request.FILES,
                                    instance=request.user.profile)
 
+        s3_object = boto3.client("s3")  # getting s3 bucket object from aws
+
+        # Update info
         if request.POST.get('update'):
+            if request.user.profile.image == 'default.jpg':
+                picture = None
+            else:
+                picture = str(request.user.profile.image)
+
             if u_form.is_valid() and p_form.is_valid():
                 u_form.save()
-                p_form.save()
+                if picture is None or p_form.cleaned_data['image'] == request.user.profile.image:
+                    pass
+                else:
+                    # deleting previous profile picture
+                    s3_object.delete_object(Bucket=os.environ.get('AWS_STORAGE_BUCKET_NAME'),
+                                            Key=picture)
+                    p_form.save()
+
                 messages.success(request, f'Your account has been updated!')
                 return redirect('profile')
+        # delete account
         if request.POST.get('delete'):
-            if request.user.profile.image.url == '/media/default.jpg':
+            if request.user.profile.image == 'default.jpg':
                 pass
-            else:
-                os.remove("C:\\Users\\vignesh\PycharmProjects\Sayit\sayit" + '\\' + request.user.profile.image.url)
 
+            else:
+                # deleting profile picture from aws s3 bucket
+                s3_object.delete_object(Bucket=os.environ.get('AWS_STORAGE_BUCKET_NAME'),
+                                        Key=str(request.user.profile.image))
+
+            # deleting inbox urls, inbox, user
             for inbox in Inbox.objects.filter(user=request.user.id):
                 x = Post.objects.filter(inbox_url=inbox.inbox_url)
                 x.delete()
@@ -151,3 +172,18 @@ def profile(request):
         'p_form': p_form,
     }
     return render(request, 'user/profile.html', context)
+
+
+# To delete profile picture
+def delete_profile(request, pk):
+    obj = Profile.objects.get(pk=pk)
+    if obj.image == 'default.jpg':
+        pass
+    else:
+        s3_object = boto3.client("s3")
+        s3_object.delete_object(Bucket=os.environ.get('AWS_STORAGE_BUCKET_NAME'),
+                                Key=str(request.user.profile.image))
+        obj.image = 'default.jpg'
+        obj.save()
+        messages.success(request, f'Profile picture has been successfully deleted!')
+    return redirect('profile')
