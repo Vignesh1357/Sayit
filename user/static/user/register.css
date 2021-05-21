@@ -1,10 +1,17 @@
-#hint_id_password1, #hint_id_username, #hint_id_password2 {
+#hint_id_password1, #hint_id_username, #hint_id_password2, #hint_id_new_password1 {
     display: none;
 }
 #error_1_id_password2, #error_2_id_password2{
     display: none;
 }
-
+#div_id_new_password2{
+    color:white;
+    margin-top:80px;
+    margin-bottom:20px;
+    }
+#div_id_new_password1{
+    color:white;
+}
 #div_id_image {
     margin-bottom:50px;
 }
@@ -18,7 +25,7 @@
     margin-top: 600px;
 }
 
-#div_id_username ,#div_id_email ,#div_id_password1 ,#div_id_password2, #div_id_password, #div_id_inbox_name {
+#div_id_username ,#div_id_email ,#div_id_password1 ,#div_id_password2, #div_id_password, #div_id_inbox_name{
     color:white;
     margin-bottom:70px;
     width : 45%;
@@ -41,6 +48,11 @@
 }
 
 .dlt-profile {
-    margin-top: -20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pass-reset {
+    float: right;
+    margin-top: -25px;
+    margin-bottom: 10px;
 }

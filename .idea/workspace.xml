@@ -5,15 +5,23 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sayit_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sayit_django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/static/user/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/user/static/user/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/static/user/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/user/static/user/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/inbox.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -65,18 +74,18 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621499933624">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621614160605">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1621499933624" />
-    <state x="376" y="102" key="EnvironmentVariablesDialog" timestamp="1621499930836">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1621614160605" />
+    <state x="376" y="102" key="EnvironmentVariablesDialog" timestamp="1621614153933">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="376" y="102" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1621499930836" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1620408457568">
+    <state x="376" y="102" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1621614153933" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621609003796">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1620408457568" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1621609003796" />
     <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1621533686818">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

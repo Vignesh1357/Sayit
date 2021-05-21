@@ -140,3 +140,6 @@ a.article-title:hover {
 .dlt-act {
     float:right;
 }
+.alert{
+    height: 60px;
+}
