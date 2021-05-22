@@ -5,12 +5,12 @@
     display: none;
 }
 #div_id_new_password2{
-    color:white;
     margin-top:80px;
     margin-bottom:20px;
     }
-#div_id_new_password1{
+#div_id_new_password1, #div_id_new_password2{
     color:white;
+    width:45%;
 }
 #div_id_image {
     margin-bottom:50px;
@@ -56,3 +56,12 @@
     margin-top: -25px;
     margin-bottom: 10px;
 }
+.reset-button{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+#forgot-pass{
+    float:right;
+    margin-top: 5px;
+}
+

@@ -4,12 +4,11 @@
     <list default="true" id="253aebd2-92c0-4d62-baab-75652f652779" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sayit_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sayit_django/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/static/user/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/user/static/user/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/static/user/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/user/static/user/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/inbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/password_reset.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/password_reset.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="sayit_email_pass" value="eznespootchdiyft" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\vignesh\AppData\Local\Programs\Python\Python38\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -74,14 +74,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621614160605">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621655380109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1621614160605" />
-    <state x="376" y="102" key="EnvironmentVariablesDialog" timestamp="1621614153933">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1621655380109" />
+    <state x="376" y="102" key="EnvironmentVariablesDialog" timestamp="1621655366323">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="376" y="102" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1621614153933" />
+    <state x="376" y="102" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1621655366323" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621609003796">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -121,6 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
@@ -137,7 +138,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('sayit_email')
-EMAIL_HOST_PASSWORD = 'pvxrhyfedlbzvbrh' #os.environ.get('sayit_email_pass')
+EMAIL_HOST_PASSWORD = os.environ.get('sayit_email_pass')
 
 # AWS storage related
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
