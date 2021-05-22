@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="253aebd2-92c0-4d62-baab-75652f652779" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="253aebd2-92c0-4d62-baab-75652f652779" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,6 +71,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1621655380109" />
+    <state x="407" y="144" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621663982876">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="407" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1621663982876" />
     <state x="376" y="102" key="EnvironmentVariablesDialog" timestamp="1621655366323">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -1,0 +1,1 @@
+web: gunicorn sayit_django.wsgi
