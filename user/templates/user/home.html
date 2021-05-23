@@ -1,10 +1,10 @@
 {% extends 'user/base.html' %}
 {% load static %}
 {% block headContent %}
-    <a class="nav-item nav-link" href="{% url 'new-inbox' %}">Create Inbox</a>
+    <a class="nav-item nav-link navbar-links" href="{% url 'new-inbox' %}">Create Inbox</a>
 {% endblock headContent %}
 {% block bodyContent %}
-    <h5 style="color:#5f788a">Your Inbox:</h5>
+    <h5 class="ur-inbox" style="color:#5f788a">Your Inbox:</h5>
 
     <div>
         {% if inboxes is None %}
@@ -12,18 +12,22 @@
         {% else %}
             {% for inbox in inboxes %}
                 <article class="media content-section">
-                <div class="media-body">
+                <div class="media-body inbox-url">
                     {% if inbox.inbox_url is None %}
                         <div class="article-metadata">
-                            <small class="text-muted"><a href="{% url 'inbox_url' inbox.pk %}">Generate Link</a></small>
+                            <div class="inbox-url">
+                            <small class="text-muted "><a href="{% url 'inbox_url' inbox.pk %}">Generate Link</a></small>
+                            </div>
                         </div>
                     {% else %}
                         <div class="article-metadata">
-                            <small class="text-muted">You can share this URL :</small>
-                            <small>{{ url }}{{ user_id }}/{{ inbox.inbox_url }}/</small>
+                            <div class="inbox-url">
+                                <small class="text-muted">You can share this URL :</small>
+                                <small>{{ url }}{{ user_id }}/{{ inbox.inbox_url }}/</small>
+                            </div>
                         </div>
                     {% endif %}
-                    <h4 class="article-content"><a href="{% url 'message-view' inbox.inbox_url %}">{{ inbox.inbox_name }}</a></h4>
+                    <h4 class="article-content inbox-name"><a href="{% url 'message-view' inbox.inbox_url %}">{{ inbox.inbox_name }}</a></h4>
                 </div>
                 </article>
             {% endfor %}

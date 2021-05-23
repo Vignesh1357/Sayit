@@ -17,23 +17,23 @@
     <header class='site-header'>
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-5 mt-auto" href="">Sayit</a>
+                <a class="navbar-brand mr-5 mt-auto sayit-logo" href="">Sayit</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mt-3 mr-auto"  style="color:white" align="center" >
-                        <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-item nav-link navbar-links" href="{% url 'home' %}">Home</a>
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav mt-3" >
                         {% if user.is_authenticated %}
-                            <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                            <a class="nav-item nav-link navbar-links" href="{% url 'profile' %}">Profile</a>
                             {% block headContent %} {% endblock headContent %}
-                            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                            <a class="nav-item nav-link navbar-links" href="{% url 'logout' %}">Logout</a>
                         {% else %}
-                            <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                            <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                            <a class="nav-item nav-link navbar-links" href="{% url 'login' %}">Login</a>
+                            <a class="nav-item nav-link navbar-links" href="{% url 'register' %}">Register</a>
                         {% endif %}
                     </div>
                 </div>

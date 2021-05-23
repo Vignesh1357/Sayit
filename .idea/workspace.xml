@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="253aebd2-92c0-4d62-baab-75652f652779" name="Default Changelist" comment="" />
+    <list default="true" id="253aebd2-92c0-4d62-baab-75652f652779" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sayit_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sayit_django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/static/user/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/user/static/user/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/static/user/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/user/static/user/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/New_message.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/New_message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/inbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/profile.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../babaco" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -79,10 +91,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="376" y="102" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1621655366323" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621609003796">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1621693335465">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1621609003796" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1621693335465" />
     <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1621533686818">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

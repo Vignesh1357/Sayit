@@ -1,7 +1,7 @@
 {% extends 'user/base.html' %}
 {% load static %}
 {% block bodyContent %}
-    <h5 style="color:#5f788a">Messages received:</h5>
+    <h5 class="message-rcvd" style="color:#5f788a">Messages received:</h5>
 
     <div>
         {% if message_box is False %}
@@ -11,12 +11,10 @@
                 <h1 class="article-content">No messages</h1>
             {% else %}
                 {% for post in posts %}
+                    <small class="datetime" >{{ post.date_posted|date:"F d, Y, h:i A" }}</small>
                     <article class="media content-section">
                     <div class="media-body">
-                        <div class="article-metadata">
-                            <small class="text-muted">{{ post.date_posted|date:"F d, Y, h:i A" }}</small>
-                        </div>
-                        <p class="article-content">{{ post.content }}</p>
+                        <p class="article-content inbox-content" >{{ post.content }}</p>
                     </div>
                     </article>
                 {% endfor %}
