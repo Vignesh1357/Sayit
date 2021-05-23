@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="253aebd2-92c0-4d62-baab-75652f652779" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sayit_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sayit_django/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/static/user/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/user/static/user/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/static/user/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/user/static/user/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/New_message.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/New_message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/inbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/password_reset_confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
