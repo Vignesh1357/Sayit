@@ -230,6 +230,10 @@ a.article-title:hover {
     .inbox-url{
         padding:25px 20px 30px 20px;
     }
+    .no-msg{
+        margin-top: 300px;
+        margin-left:5px;
+    }
 }
 /* messages */
 @media (max-width: 1000px){
