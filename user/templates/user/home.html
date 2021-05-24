@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     {% endif %}
-                    <h4 class="article-content inbox-name"><a href="{% url 'message-view' inbox.inbox_url %}">{{ inbox.inbox_name }}</a></h4>
+                    <h4 class="article-content inbox-name"><a href="{% url 'message-view' inbox.pk inbox.inbox_url  %}">{{ inbox.inbox_name }}</a></h4>
                 </div>
                 </article>
             {% endfor %}

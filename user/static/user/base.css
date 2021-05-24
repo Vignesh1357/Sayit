@@ -130,7 +130,7 @@ a.article-title:hover {
 
 .msg{
     height: 40px;
-    margin-top:10px;
+    margin-top:5px;
 }
 .alert-block {
     height: 60px;
@@ -154,6 +154,16 @@ a.article-title:hover {
     margin-top: 10px;
 }
 
+.dlt-inbox{
+    float:right;
+    margin-top: -20px;
+}
+.no-msg{
+    margin-top: 60px;
+}
+.new-inbox{
+     margin-top: -10px;
+}
 /* HOME */
 @media (max-width: 1000px){
     .navbar{
@@ -187,14 +197,15 @@ a.article-title:hover {
         font-size: 30px;
     }
 
-    #id_username, #id_password, #id_email, #id_new_password1, #id_new_password2{
+    #id_username, #id_password, #id_email, #id_new_password1, #id_new_password2, #id_inbox_name{
         margin-top: 20px;
         margin-bottom: 100px;
         height: 80px;
         width:700px;
         font-size: 30px;
     }
-    #div_id_username.form-group, #div_id_password.form-group, #div_id_email.form-group, #div_id_content, #div_id_new_password1, #div_id_new_password2{
+    #div_id_username.form-group, #div_id_password.form-group, #div_id_email.form-group, #div_id_content, #div_id_new_password1, #div_id_new_password2,
+    #div_id_inbox_name{
         margin-top: 30px;
         margin-bottom: 200px;
     }
@@ -213,7 +224,7 @@ a.article-title:hover {
 /* inbox */
 @media (max-width: 1000px){
     .ur-inbox{
-        margin-top: 100px;
+        margin-top: 130px;
         font-size: 70px;
         float: left;
         margin-left: -80px;
@@ -228,10 +239,10 @@ a.article-title:hover {
         margin-left: 20px;
     }
     .inbox-url{
-        padding:25px 20px 30px 20px;
+        padding:25px 20px 30px 10px;
     }
     .no-msg{
-        margin-top: 500px;
+        margin-top: 400px;
         margin-left:20px;
     }
 }
@@ -259,6 +270,9 @@ a.article-title:hover {
         font-size: 70px;
         margin-top: 100px;
         margin-bottom: -150px
+    }
+    .dlt-inbox {
+        font-size:30px;
     }
 }
 /* profile */
@@ -318,5 +332,12 @@ a.article-title:hover {
     }
     .reset-btn{
         margin-top: 200px;
+    }
+}
+/* new inbox */
+@media (max-width: 1000px){
+    .new-inbox{
+        margin-top: 70px;
+        width: 900px;
     }
 }

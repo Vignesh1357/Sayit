@@ -76,6 +76,7 @@ class MsgListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
     template_name = 'user/inbox.html'
     ordering = ['-date_posted']
 
+
     def test_func(self):
         try:
             if Inbox.objects.get(inbox_url=self.kwargs.get('message')).user.user == self.request.user:
@@ -85,6 +86,7 @@ class MsgListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
         except:
             return True
 
+    # adding context to req
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         posts = Post.objects.filter(inbox_url=self.kwargs.get('message'))
@@ -98,6 +100,19 @@ class MsgListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
             context['message_box'] = True
         return context
 
+    # deleting inbox and posts
+    def post(self, request, *args, **kwargs):
+        inbox = Inbox.objects.get(pk=self.kwargs.get('pk'))
+        inbox.delete()
+        try:
+            posts = Post.objects.filter(inbox_url=self.kwargs.get('message'))
+            for post in posts:
+                post.delete()
+
+        except:
+            pass
+        messages.success(request, f'Inbox deleted successfully')
+        return redirect('home')
 
 # User registration view
 def register(request):
@@ -155,8 +170,9 @@ def profile(request):
 
             # deleting inbox urls, inbox, user
             for inbox in Inbox.objects.filter(user=request.user.id):
-                x = Post.objects.filter(inbox_url=inbox.inbox_url)
-                x.delete()
+                posts = Post.objects.filter(inbox_url=inbox.inbox_url)
+                for post in posts:
+                    post.delete()
             for inbox in Inbox.objects.filter(user=request.user.id):
                 inbox.delete()
             request.user.delete()
