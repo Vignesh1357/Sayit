@@ -5,6 +5,7 @@ from django.contrib.auth import views as auth_views
 from django.shortcuts import render,redirect
 urlpatterns = [
     path("", InboxListView.as_view(), name='home'),
+    path("max-inbox/", views.max_inbox, name='max-inbox'),
     path('link/<int:pk>/', views.inbox, name='inbox_url'),
     path('inbox/new/', InboxCreateView.as_view(), name='new-inbox'),
     path('register/', views.register, name='register'),

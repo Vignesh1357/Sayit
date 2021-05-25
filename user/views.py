@@ -20,11 +20,15 @@ class InboxListView(LoginRequiredMixin, ListView):
         context['inboxes'] = Inbox.objects.filter(user=self.request.user.id)
         context['url'] = self.request.get_host() + '/' + 'sayit/message/'
         context['user_id'] = self.request.user.id
+        context['inbox_count'] = Inbox.objects.filter(user=self.request.user.id).count()
+
         return context
 
     context_object_name = 'inbox'
 
-
+# Maximum inbox
+def  max_inbox(request):
+    return render(request,'user/max_inbox.html')
 # Inbox creation view
 class InboxCreateView(LoginRequiredMixin, CreateView):
     model = Inbox

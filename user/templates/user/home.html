@@ -1,7 +1,11 @@
 {% extends 'user/base.html' %}
 {% load static %}
 {% block headContent %}
-    <a class="nav-item nav-link navbar-links" href="{% url 'new-inbox' %}">Create Inbox</a>
+    {%  if inbox_count < 7 %}
+        <a class="nav-item nav-link navbar-links" href="{% url 'new-inbox' %}">Create Inbox</a>
+    {% else %}
+        <a class="nav-item nav-link navbar-links" href="{% url 'max-inbox' %}">Create Inbox</a>
+    {% endif %}
 {% endblock headContent %}
 {% block bodyContent %}
     <h5 class="ur-inbox" style="color:#5f788a">Your Inbox:</h5>
