@@ -1,7 +1,7 @@
 #hint_id_password1, #hint_id_username, #hint_id_password2, #hint_id_new_password1 {
     display: none;
 }
-#error_1_id_password2, #error_2_id_password2{
+#error_1_id_password2, #error_2_id_password2, #error_1_id_username, #error_3_id_password2{
     display: none;
 }
 #div_id_new_password2{

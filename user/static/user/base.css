@@ -197,7 +197,7 @@ a.article-title:hover {
         font-size: 30px;
     }
 
-    #id_username, #id_password, #id_email, #id_new_password1, #id_new_password2, #id_inbox_name{
+    #id_username, #id_password, #id_email, #id_new_password1, #id_new_password2, #id_inbox_name, #id_password1{
         margin-top: 20px;
         margin-bottom: 100px;
         height: 80px;
@@ -209,6 +209,7 @@ a.article-title:hover {
         margin-top: 30px;
         margin-bottom: 200px;
     }
+
     .alert-block{
         height: 100px;
         margin-top: 20px;
@@ -317,6 +318,7 @@ a.article-title:hover {
 @media (max-width: 1000px){
     .border-top, .signup{
         padding-top: 10px;
+        width: 900px;
     }
     legend.border-bottom{
         width: 20cm;
@@ -340,4 +342,29 @@ a.article-title:hover {
         margin-top: 70px;
         width: 900px;
     }
+}
+/* register */
+@media (max-width: 1000px){
+    #div_id_password1, #div_id_password2{
+        margin-top: 30px;
+        margin-bottom: 200px;
+    }
+    input#id_password1.textinput{
+        margin-top:30px;
+    }
+     input#id_password2{
+        margin-top:30px;
+        width: 700px;
+        height: 80px;
+        margin-bottom: 100px;
+        font-size:30px;
+     }
+     #div_id_password2{
+        margin-top: 200px;
+        padding-bottom: 150px;
+     }
+     #error_1_id_username, #error_1_id_password2, #error_2_id_password2, #error_3_id_password2{
+        display: none;
+     }
+
 }
