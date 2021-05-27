@@ -19,11 +19,10 @@ class UserRegisterForm(UserCreationForm):
 
 
 class UserUpdateForm(forms.ModelForm):
-    email = forms.EmailField()
 
     class Meta:
         model = User
-        fields = ['username', 'email']
+        fields = ['username']
 
 
 class ProfileUpdateForm(forms.ModelForm):

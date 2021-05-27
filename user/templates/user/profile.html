@@ -2,13 +2,13 @@
 {% load crispy_forms_tags %}
 {% block content %}
     <div class="content-section">
-      <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-        <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
+        <div class="media">
+            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+            </div>
         </div>
-      </div>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset class ="profile-info" style="color:white">
@@ -17,7 +17,7 @@
             </fieldset>
             {% if user.profile.image == 'default.jpg' %}
                 <div class="form-group profile-btn">
-                    <button class="btn btn-outline-info update-button" type="submit" name="update" value="update">Update</button>
+                    <button class="btn btn-outline-info" type="submit" name="update" value="update">Update</button>
                     <button class="btn btn-outline-info dlt-act" type="submit" name="delete" value="delete">Delete account</button>
                     <h6 class="dlt-profile">Want to change password?<a href="{% url 'password_reset' %}">Reset</a></h6>
                </div>
@@ -26,10 +26,10 @@
                     <button class="btn  btn-outline-info update-button" type="submit" name="update" value="update">Update</button>
                     <button class="btn btn-outline-info dlt-act" type="submit" name="delete" value="delete">Delete account</button>
                 </div>
-                <div class="profile-btnone">
+                <div>
                     <h6 class="button-one"><a href="{% url 'delete-profile' user.pk %}">Remove </a>current profile picture</h6>
                 </div>
-                <div class="profile-btnone">
+                <div>
                     <h6 class="button-one">Want to change password?<a href="{% url 'password_reset' %}">Reset</a></h6>
                 </div>
             {% endif %}

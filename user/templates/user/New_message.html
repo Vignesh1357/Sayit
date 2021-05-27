@@ -5,7 +5,7 @@
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
-            <fieldset class ="form-group ">
+            <fieldset class ="form-msg ">
                 <legend class="border-bottom">Enter your message here:</legend>
                 {{ form|crispy }}
             </fieldset>

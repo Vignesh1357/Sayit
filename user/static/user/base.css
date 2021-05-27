@@ -9,7 +9,6 @@ body {
     width: 70%;
     color:black;
 }
-
 article{
     margin-top: 1rem;
     height:65px;
@@ -48,15 +47,6 @@ ul {
   color: #ffffff;
 }
 
-.content-section {
-  background: #ffffff;
-  padding: 30px 20px;
-  border: px solid #dddddd;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  margin-top: 3px;
-}
-
 .article-title {
   color: #444444;
 }
@@ -65,12 +55,6 @@ a.article-title:hover {
   color: #428bca;
   text-decoration: none;
 }
-
-.article-content {
-    white-space: pre-line;
-    margin-top: -20px;
-}
-
 .article-img {
   height: 65px;
   width: 65px;
@@ -92,26 +76,69 @@ a.article-title:hover {
   height: 25px;
   vertical-align: middle;
 }
+/*home*/
+.article-content {
+    white-space: pre-line;
+    margin-top: -20px;
+}
+.content-section {
+  background: #ffffff;
+  padding: 30px 20px;
+  border: px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  margin-top: 3px;
+}
 
+/* profile */
 .account-img {
   height: 125px;
   width: 125px;
   margin-right: 20px;
   margin-top: -25px;
-
 }
-
 .account-heading {
   font-size: 2rem;
   margin-top: -32px;
   margin-bottom: -5px;
 }
+.profile-info {
+    margin-top:100px;
+    height: 250px;
+    width: 600px;
+}
+.dlt-act {
+    float:right;
+    margin-top: 5px;
+}
+.profile-btn{
+    margin-top:-100px;
 
-.form-group {
+}
+.dlt-profile {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* new message */
+.form-msg{
+    margin-bottom:200px;
+    margin-top:-5px;
+}
+/* password-reset login*/
+.reset-button{
+    margin-left: -20px;
+    margin-top: 20px;
+}
+.form-group{
     margin-bottom:40px;
     margin-top:-5px;
 }
-
+/* password-reset-confirm */
+.reset-btn{
+    padding-top: 20px;
+    margin-left:-40px;
+}
+/* login button */
 .border-bottom {
     color: black;
     margin-top:70px;
@@ -119,15 +146,38 @@ a.article-title:hover {
     height: 70px;
     margin-bottom: 10px;
 }
+.signin {
+    float:right;
+}
+.signup{
+    margin-top: -30px;
+    float:left;
+    margin-left: -40px;
+}
+.button {
+    margin-top:50px;
+    margin-left:40px;
+}
 .border-top{
     padding-top: 30px;
 }
-.profile-info {
-    margin-top:100px;
-    height: 300px;
-    width: 600px;
+/* max-inbox */
+.alert{
+    height: 60px;
+}
+/*inbox*/
+.dlt-inbox{
+    float:right;
+    margin-top: -20px;
+}
+.no-msg{
+    margin-top: 60px;
+}
+.datetime{
+    color:white;
 }
 
+/* not used */
 .msg{
     height: 40px;
     margin-top:5px;
@@ -143,26 +193,22 @@ a.article-title:hover {
     opacity : 70%;
 }
 
-.dlt-act {
-    float:right;
-}
-.alert{
-    height: 60px;
-}
-
-.update-button{
-    margin-top: 10px;
-}
-
-.dlt-inbox{
-    float:right;
-    margin-top: -20px;
-}
-.no-msg{
-    margin-top: 60px;
-}
 .new-inbox{
-     margin-top: -10px;
+     margin-top: -30px;
+}
+#div_id_username.form-group{
+    margin-top:-10px;
+    margin-bottom:80px;
+}
+#error_1_id_username, #error_1_id_password2, #error_2_id_password2, #error_3_id_password2, #error_1_id_new_password2{
+    width: 900px;
+}
+#error_2_id_password2, #error_2_id_new_password2{
+    margin-top:-15px;
+    width: 900px;
+}
+#id_content.textarea{
+    height: 200px;
 }
 /* HOME */
 @media (max-width: 1000px){
@@ -197,39 +243,19 @@ a.article-title:hover {
         font-size: 30px;
     }
 
-    #id_username, #id_password, #id_email, #id_new_password1, #id_new_password2, #id_inbox_name, #id_password1{
-        margin-top: 20px;
-        margin-bottom: 100px;
-        height: 80px;
-        width:700px;
-        font-size: 30px;
-    }
-    #div_id_username.form-group, #div_id_password.form-group, #div_id_email.form-group, #div_id_content, #div_id_new_password1, #div_id_new_password2,
-    #div_id_inbox_name{
-        margin-top: 30px;
-        margin-bottom: 200px;
-    }
-
     .alert-block{
         height: 100px;
         margin-top: 20px;
     }
+}
+/* inbox */
+@media (max-width: 1000px){
     .ur-inbox{
         margin-top: 100px;
         font-size: 70px;
         float: left;
         margin-left: -80px;
         margin-bottom: 30px;
-    }
-}
-/* inbox */
-@media (max-width: 1000px){
-    .ur-inbox{
-        margin-top: 130px;
-        font-size: 70px;
-        float: left;
-        margin-left: -80px;
-        margin-bottom: 10px;
     }
     article.media{
         height:175px;
@@ -246,9 +272,6 @@ a.article-title:hover {
         margin-top: 400px;
         margin-left:20px;
     }
-}
-/* messages */
-@media (max-width: 1000px){
     .inbox-content{
         font-size:40px;
         margin-left: 20px;
@@ -263,6 +286,12 @@ a.article-title:hover {
         color: white;
         margin-left:-100px;
     }
+    .dlt-inbox {
+        font-size:30px;
+    }
+}
+/* messages */
+@media (max-width: 1000px){
     article{
        overflow: scroll;
        color: black;
@@ -271,9 +300,6 @@ a.article-title:hover {
         font-size: 70px;
         margin-top: 100px;
         margin-bottom: -150px
-    }
-    .dlt-inbox {
-        font-size:30px;
     }
 }
 /* profile */
@@ -285,7 +311,7 @@ a.article-title:hover {
         font-size:30px;
     }
     .profile-btn{
-        margin-top:400px;
+        padding-top:200px;
     }
     .dlt-profile{
         font-size: 30px;
@@ -299,13 +325,19 @@ a.article-title:hover {
     .button-one{
         font-size: 30px;
     }
-    .pass-reset{
-        font-size: 30px;
-    }
     .profile-btnone{
         margin-top: 60px;
         margin-bottom: -20px;
         margin-left: -50px;
+    }
+    .profile-info{
+        margin-top:100px;
+        height: 300px;
+        width: 600px;
+    }
+    /*not used */
+    .pass-reset{
+        font-size: 30px;
     }
     div.msg{
         margin-top:100px;
@@ -316,12 +348,12 @@ a.article-title:hover {
 }
 /* message sending */
 @media (max-width: 1000px){
-    .border-top, .signup{
-        padding-top: 10px;
-        width: 900px;
-    }
     legend.border-bottom{
         width: 20cm;
+    }
+    #id_content.textarea{
+        font-size: 30px;
+        width: 600px;
     }
 }
 /* reset message */
@@ -333,7 +365,12 @@ a.article-title:hover {
         height: 110px;
     }
     .reset-btn{
-        margin-top: 200px;
+        margin-top: 210px;
+        margin-left: -45px
+    }
+    .form-msg {
+        margin-bottom:160px;
+        margin-top:-5px;
     }
 }
 /* new inbox */
@@ -343,28 +380,34 @@ a.article-title:hover {
         width: 900px;
     }
 }
-/* register */
+/* register login */
 @media (max-width: 1000px){
-    #div_id_password1, #div_id_password2{
-        margin-top: 30px;
-        margin-bottom: 200px;
+    .form-group {
+        margin-bottom:150px;
+        margin-top:-5px;
+     }
+    .border-top, .signup{
+        padding-top: 40px;
+        width: 900px;
     }
-    input#id_password1.textinput{
-        margin-top:30px;
+    .signin{
+        float:right;
+        padding-top:25px;
     }
-     input#id_password2{
-        margin-top:30px;
-        width: 700px;
+    #id_username, #id_password, #id_email, #id_new_password1, #id_new_password2, #id_inbox_name, #id_password1, #id_password2{
+        margin-top: 20px;
         height: 80px;
-        margin-bottom: 100px;
-        font-size:30px;
-     }
-     #div_id_password2{
-        margin-top: 200px;
-        padding-bottom: 150px;
-     }
-     #error_1_id_username, #error_1_id_password2, #error_2_id_password2, #error_3_id_password2{
-        display: none;
-     }
-
+        width:700px;
+        font-size: 30px;
+    }
+    #div_id_username.form-group, #div_id_content{
+        margin-top: 30px;
+    }
+    #div_id_password.form-group, #div_id_email.form-group, #div_id_new_password1,#div_id_inbox_name, #div_id_password1, #div_id_password2, #div_id_image{
+        margin-top: 170px;
+        margin-bottom: 40px;
+    }
+    #div_id_new_password2{
+        padding-top: 90px;
+    }
 }

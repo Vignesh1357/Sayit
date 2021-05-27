@@ -8,12 +8,12 @@
                 <legend class="border-bottom">New Inbox</legend>
                 {{ form|crispy }}
             </fieldset>
-            <div class="new-inbox">
+            <div class="signup">
                 <button class="btn btn-outline-primary button" type="submit">Create</button>
             </div>
         </form>
-        <div class="new-inbox">
-            <small class="text-muted signin ">
+        <div>
+            <small class="text-muted signin pt-4">
                 Don't want to create? <a class="ml-2" href="{% url 'home' %}">Go back</a>
             </small>
         </div>
